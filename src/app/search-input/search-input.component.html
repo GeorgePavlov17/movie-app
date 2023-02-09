@@ -1,0 +1,10 @@
+<div class="search-input-wrapper">
+    <input #search type="text" (keyup)="performSearch($event)">
+    <div class="results-list" [style.display]="(searchResults.length > 0) ? 'block' : 'none'">
+        <ul>
+            <li *ngFor="let movie of searchResults" (click)="selectResult(movie)">
+                {{ movie.title }}
+            </li>
+        </ul>
+    </div>
+</div>

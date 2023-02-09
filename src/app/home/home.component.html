@@ -1,0 +1,80 @@
+<app-header (onSearchedMovie)="displayMovie($event)"></app-header>
+
+<div class="img-container">
+    <h1 style="margin-bottom: 5px; text-align: center;">Welcome to Movie app</h1>
+    <img src="../../assets/images/movie-poster.jpg" alt="">
+</div>
+
+<div style="text-align: center; margin: 20px 0px;">
+    <h1 class="popular-movies-header">Popular movies</h1>
+    <!-- <button (click)="getPopular()" style="padding: 15px; background: #333; color: #fff; border-radius: 8px;">See popular movies</button> -->
+    <div *ngFor="let popular of popularMovies" class="popular-movie-card">
+        <img class="backdrop" *ngIf="popular?.poster" src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{popular?.poster}}" [alt]="">
+        <img class="backdrop" *ngIf="!popular?.poster" src="assets/images/cinema.jpg" [alt]="">
+        <div class="shader"></div>
+        <span class="movie-title">
+            <h4><b>{{ popular.title }}</b></h4>
+        </span>
+        <span class="movie-release">
+            <p>Release date: {{ popular.release }}</p>
+        </span>
+        <span class="movie-rating">
+            <p>Rating: {{ popular.rating }}/10</p>
+        </span>
+    </div>
+</div>
+
+<!-- Input upload -->
+<div style="text-align: center;">
+    <h1 class="list-movies-header">Search by uploading list of movies</h1>
+</div>
+<div class="container">
+    <div class="input-upload">
+        <label for="file">Upload list </label>
+        <input class="btn-file" type="file" #file name="file" accept=".txt">
+        <input class="btn-upload" (click)="uploadFile()" type="button" value="Upload">
+    </div>
+
+    <!-- Input upload list -->
+    <div>
+        <div *ngFor="let entry of uploaded">
+            <h2><input type="checkbox" id="scales" name="scales" [(ngModel)]="entry.checked">{{ entry.title }}
+            </h2>
+        </div>
+        <button class="btn-search" *ngIf="uploaded.length > 0 && movies.length == 0" (click)="search()">Search</button>
+    </div>
+</div>
+
+<!-- Movie cards -->
+<div style="text-align: center; margin: 20px 0px;" *ngIf="movies.length > 0">
+    <div class="select">
+        <select id="sort-by" (change)="sortByRating($event)">
+            <option value="" selected disabled hidden>Sort By</option>
+            <option value="Low">Lowest rating</option>
+            <option value="High">Highest rating</option>
+        </select>
+    </div>
+
+    <div *ngFor="let match of movies" class="popular-movie-card">
+        <img class="backdrop" *ngIf="match?.poster"
+            src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{match?.poster}}" [alt]="">
+        <img class="backdrop" *ngIf="!match?.poster" src="assets/images/cinema.jpg" [alt]="">
+        <div class="shader"></div>
+        <span class="movie-title">
+            <h4><b>{{ match.title }}</b></h4>
+        </span>
+        <span class="movie-release">
+            <p>Release date: {{ match.release }}</p>
+        </span>
+        <span class="movie-rating">
+            <p>Rating: {{ match.rating }}/10</p>
+        </span>
+        <span class="delete-icon">
+            <p><i (click)="delete(match)" class="fa fa-trash"></i></p>
+        </span>
+
+    </div>
+    <button class="btn-save" *ngIf="movies.length > 0" (click)="save()">Save</button>
+</div>
+
+<app-footer></app-footer>

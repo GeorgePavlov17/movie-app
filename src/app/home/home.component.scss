@@ -1,0 +1,207 @@
+/* Movie card */
+.movie-card {
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+    margin: 8px;
+    object-fit: cover;
+    overflow: hidden;
+    width: calc(50% - 16px);
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img.backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    span.movie-title {
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        padding: 16px;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 32px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+
+    span.movie-release {
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        right: 0;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+
+    span.movie-rating {
+        position: absolute;
+        display: inline-block;
+        margin-top: 82px;
+        right: 0;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+
+    span.delete-icon {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        cursor: pointer; 
+        color: red; 
+        font-size: 22px; 
+        margin: 8px;
+    }
+
+    div.shader {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 128px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+
+}
+
+select {
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    padding: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.input-upload {
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+    opacity: 0.9;
+    margin-top: 10px;
+    padding: 16px;
+    margin-top: 0;
+}
+
+.btn-search {
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-save {
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    padding: 8px;
+    margin-left: 8px;
+    padding-right: 80px;
+}
+
+.input-upload label {
+    font-weight: 400;
+}
+
+.input-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.9;
+    width: 40%;
+    height: 70px;
+    position: fixed;
+    top: 180px;
+    padding-top: inherit;
+}
+
+.input-search input {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container {
+    display: block;
+    width: 768px;
+    height: auto;
+    margin: 0 auto;
+    padding: 16px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.popular-movies-header {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.9;
+    margin-top: 24px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.popular-movie-card {
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+    margin: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    color: #333;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.list-movies-header {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.9;
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 10px;
+}

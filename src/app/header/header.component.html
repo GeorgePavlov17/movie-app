@@ -1,0 +1,16 @@
+<div id="navbar" class="navbar top">
+    <h1 class="logo" routerLink="/home" style="cursor: pointer;">
+        <span class="text-primary">Movie</span> app
+    </h1>
+    <div class="search-bar">
+        <app-search-input (onSelect)="emitSearchedMovie($event)"></app-search-input>
+    </div>
+    <nav>
+        <ul>
+            <li><a [routerLink]="'/home'">Home</a></li>
+            <li><a [routerLink]="'/genres'">Explore movies</a></li>
+            <li><a [routerLink]="'/about'">About</a></li>
+            <li><a [routerLink]="'/contact'">Contact</a></li>
+        </ul>
+    </nav>
+</div>
