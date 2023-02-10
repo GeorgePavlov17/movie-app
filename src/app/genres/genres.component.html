@@ -2,10 +2,10 @@
 
 <div id="genres" class="genres top">
     <h1 class="text-primary">Genres</h1>
-    <div *ngFor="let name of genresList" class="genre-card">
+    <div *ngFor="let genre of genresList" class="genre-card">
         <ul>
             <li>
-                <a (click)="showMoviesByGenre()" class="genres">{{ name }}</a>
+                <a (click)="showMoviesByGenre(genre.id)" class="genres" [class.active]="selectedGenre==genre.id">{{ genre.name }}</a>
             </li>
         </ul>
     </div>
@@ -18,7 +18,7 @@
         <img class="backdrop" *ngIf="!genre?.poster" src="assets/images/cinema.jpg" [alt]="">
         <div class="shader"></div>
         <span class="movie-title">
-            <h4><b>{{ genre.title }}</b></h4>
+            <b>{{ genre.title }}</b>
         </span>
         <span class="movie-release">
             <p>Release date: {{ genre.release }}</p>
