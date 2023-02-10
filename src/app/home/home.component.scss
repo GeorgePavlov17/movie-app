@@ -100,7 +100,7 @@ select {
 
 .input-upload {
     background-color: #333;
-    border-radius: 8px;
+    border-radius: 15px;
     color: #fff;
     opacity: 0.9;
     margin-top: 10px;
@@ -145,7 +145,7 @@ select {
 }
 
 .input-search input {
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 10px;
 }
 
@@ -170,14 +170,13 @@ select {
 }
 
 .popular-movies-header {
-    display: inline-block;
-    width: 100%;
+    width: auto;
     text-align: center;
     background-color: #333;
     color: #fff;
     opacity: 0.9;
-    margin-top: 24px;
-    margin-bottom: 0px;
+    margin: 20px;
+    border-radius: 15px;
     padding: 10px;
 
     &:hover {
@@ -201,19 +200,30 @@ select {
 }
 
 .list-movies-header {
-    display: inline-block;
-    width: 100%;
+    width: auto;
     text-align: center;
     background-color: #333;
     color: #fff;
     opacity: 0.9;
-    margin-top: 24px;
-    margin-bottom: 0;
+    margin: 20px;
+    border-radius: 15px;
     padding: 10px;
    
     &:hover {
         color: #847ebe;
         cursor: pointer;
     }
-    
+
+}
+
+.app-name-header {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+    opacity: 0.9;
+
+    &:hover {
+        color: #847ebe;
+        cursor: pointer; 
+    }
 }
