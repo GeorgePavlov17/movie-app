@@ -179,6 +179,12 @@ select {
     margin-top: 24px;
     margin-bottom: 0px;
     padding: 10px;
+
+    &:hover {
+        color: #847ebe;
+        cursor: pointer;
+    }
+
 }
 
 .popular-movie-card {
@@ -204,4 +210,10 @@ select {
     margin-top: 24px;
     margin-bottom: 0;
     padding: 10px;
+   
+    &:hover {
+        color: #847ebe;
+        cursor: pointer;
+    }
+    
 }

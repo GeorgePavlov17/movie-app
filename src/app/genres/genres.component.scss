@@ -29,19 +29,19 @@ ul {
 .genres a {
     display: flex;
     color: #333;
-    cursor: pointer;
     border: solid 2px;
     border-radius: 8px;
     padding: 8px;
-}
 
-.genres a:hover {
-    border-bottom: 2px solid;
+    &:hover {
+        color: #847ebe;
+        cursor: pointer;
+    }
 }
 
 .genres a.active {
     background: #333;
-    color: #fff;
+    color: #847ebe;
 }
 
 .genres ul {

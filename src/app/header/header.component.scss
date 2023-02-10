@@ -24,13 +24,12 @@
             color: white;
 
             &:hover {
-                border-bottom: #3a83e4 2px solid;
+                border-bottom: #847ebe 2px solid;
             }
         }
     }
 
     .search-bar {
-        flex: 1 1 100%;
         padding: 0 32px;
     }
 
@@ -38,6 +37,10 @@
         padding: 0 32px;
         font-weight: bold;
         white-space: nowrap;
+
+        &:hover {
+            color: #847ebe;
+        }
     }
 
     @media screen and (max-width: 768px) {
