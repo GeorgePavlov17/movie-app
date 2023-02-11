@@ -1,0 +1,93 @@
+.contact-header {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    opacity: 0.9;
+    margin-top: 25px;
+}
+
+.contact-cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #847ebe;
+    color: #fff;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.input {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-input {
+    margin: 20px;
+}
+
+input {
+    background-color: #f4f4f4;
+    border: 1px solid #9f9b9b;
+    font-size: 1rem;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+textarea {
+    background-color: #f4f4f4;
+    border: 1px solid #9f9b9b;
+    font-size: 1rem;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 48.5%;
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+.row .input {
+    margin-bottom: 82px;
+}
+
+button {
+    background-color: #f4f4f4;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20%;
+
+    &:hover {
+        background: #847ebe;
+        color: #fff;
+        cursor: pointer; 
+    }
+}
+
+i {
+    margin-right: 10px;
+}
