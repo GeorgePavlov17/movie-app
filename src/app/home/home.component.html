@@ -16,11 +16,15 @@
             <h4><b>{{ popular.title }}</b></h4>
         </span>
         <span class="movie-release">
-            <p>Release date: {{ popular.release }}</p>
+            <p><i class="fa fa-film"></i> Release date: {{ popular.release }}</p>
         </span>
         <span class="movie-rating">
-            <p>Rating: {{ popular.rating }}/10</p>
+            <p><i class="fa fa-star"></i> Rating: {{ popular.rating }}/10</p>
         </span>
+        <!-- <span class="movie-rating">
+            <i class="fa fa-info-circle" style="justify-content: start;"> Overview:</i> 
+            <p style="text-align: center; margin-top: 5px;">{{ popular.overview }}</p>
+        </span> -->
     </div>
 </div>
 
@@ -31,8 +35,8 @@
 <div class="container">
     <div class="input-upload">
         <label for="file">Upload list </label>
-        <input class="btn-file" type="file" #file name="file" accept=".txt">
-        <input class="btn-upload" (click)="uploadFile()" type="button" value="Upload">
+        <input class="btn-file" style="cursor: pointer" type="file" #file name="file" accept=".txt">
+        <input class="btn-upload" style="cursor: pointer" (click)="uploadFile()" type="button" value="Upload">
     </div>
 
     <!-- Input upload list -->

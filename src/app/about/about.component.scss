@@ -18,6 +18,10 @@
         border-radius: 25px;
         margin: 8px;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        &:hover {
+            color: #847ebe;
+        }
     }
 
     p {
@@ -30,7 +34,6 @@
 .about-img-card img {
     position: relative;
     display: flex;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
     width: 550px;
     height: 550px;
     margin: 20px;
@@ -41,8 +44,7 @@
     overflow: hidden;
 
     &:hover {
-        width: 580px;
-        height: 580px;
+        box-shadow: 5px 5px 5px rgb(139, 129, 197);
     }
 }
 
