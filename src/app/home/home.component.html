@@ -40,9 +40,9 @@
     </div>
 
     <!-- Input upload list -->
-    <div>
+    <div class="matches">
         <div *ngFor="let entry of uploaded">
-            <h2><input type="checkbox" id="scales" name="scales" [(ngModel)]="entry.checked">{{ entry.title }}
+            <h2 class="match-header"><input type="checkbox" id="scales" name="scales" [(ngModel)]="entry.checked">{{ entry.title }}
             </h2>
         </div>
         <button class="btn-search" *ngIf="uploaded.length > 0 && movies.length == 0" (click)="search()">Search</button>

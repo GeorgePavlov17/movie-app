@@ -43,7 +43,11 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 500px) {
         flex-direction: column;
+
+        ul {
+            font-size: 16px;
+        }
     }
 }

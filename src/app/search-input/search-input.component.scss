@@ -53,3 +53,10 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .search-input-wrapper {
+        display: flex;
+        width: 210px;
+    }
+}
