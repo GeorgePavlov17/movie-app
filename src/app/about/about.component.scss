@@ -32,8 +32,7 @@
 }
 
 .about-img-card img {
-    position: relative;
-    display: flex;
+    object-fit: contain;
     width: 550px;
     height: 550px;
     margin: 20px;
@@ -41,7 +40,6 @@
     margin-bottom: 100px;
     border-radius: 50%;
     cursor: pointer;
-    overflow: hidden;
 
     &:hover {
         box-shadow: 5px 5px 5px rgb(139, 129, 197);
@@ -61,4 +59,39 @@ a {
 a:hover {
     color: #847ebe;
     font-size: 3.25rem;
+}
+
+@media screen and (max-width: 500px) {
+    #about {
+        flex-direction: column;
+
+    }
+
+    .about-img-card {
+        margin-top: 24px;
+    }
+
+    .about-img-card img {
+        width: 210px;
+        height: 210px;
+        margin: 5px;
+    }
+
+    .personal-info > p {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .link {
+        margin: 12px;
+    }
+
+    .link > a {
+        font-size: 36px;
+    }
+
+    span {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
