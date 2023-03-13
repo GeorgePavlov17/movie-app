@@ -1,11 +1,12 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.flex-container {
+.container {
     display: flex;
     flex-direction: column;
-    align-items: ce;
     flex-wrap: wrap;
 }
 
@@ -13,11 +14,22 @@
     flex-direction: row;
     justify-content: center;
     display: flex;
-    font-size: 24px;
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
     color: #333;
-    opacity: 0.9;
-    margin-top: 25px;
+    opacity: 0.5;
+    margin-top: 48px;
+
+    &:hover {
+        color: #847ebe;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
+
+.contact-header > h2 {
+    font-size: 2.5rem;
 }
 
 .contact-cards {
@@ -28,15 +40,25 @@
 }
 
 .card {
+    display: flex;
     margin: 20px;
     padding: 20px;
     border-radius: 16px;
     background: #847ebe;
+    opacity: 0.5;
     color: #fff;
     width: 20%;
+    justify-content: center;
     text-align: center;
     cursor: pointer;
-    opacity: 0.7;
+
+    &:hover {
+        box-shadow: 0 5px 10px rgb(5 5 5 / 30%);
+    }
+}
+
+.card > a {
+    color: #333;
 }
 
 .card a {
@@ -45,15 +67,8 @@
     font-size: 20px;
 }
 
-.input {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 113px;
-}
-
 .contact-input {
-    margin: 20px;
+    width: 100%;
 }
 
 input {
@@ -61,14 +76,22 @@ input {
     border: 1px solid #9f9b9b;
     font-size: 1rem;
     outline: none;
-    padding: 15px;
+    padding: 16px;
+    margin: 20px;
     border-radius: 10px;
     width: 50%;
 }
 
 .input-box {
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
     width: 100%;
+    margin-top: 35px;
+    margin-bottom: 117px;
 }
 
 textarea {
@@ -76,31 +99,131 @@ textarea {
     border: 1px solid #9f9b9b;
     font-size: 1rem;
     outline: none;
-    padding: 15px;
+    padding: 16px;
     border-radius: 10px;
-    width: 48.8%;
+    margin: 20px;
+    width: 50%;
     height: 100px;
-    margin-bottom: 25px;
 }
 
 button {
     background-color: #f4f4f4;
     border: none;
-    font-size: 1rem;
+    font-size: 24px;
     outline: none;
-    padding: 15px;
+    padding: 10px;
+    color: #847ebe;
+    opacity: 0.5;
     border-radius: 10px;
     cursor: pointer;
     width: 20%;
 
     &:hover {
         background: #847ebe;
+        opacity: 0.5;
         color: #fff;
         cursor: pointer; 
     }
 }
 
 i {
-    font-size: 25px;
+    font-size: 24px;
     margin-right: 10px;
+}
+
+@media screen and(max-width: 1200px) {
+    .contact-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 35%;
+    }
+}
+
+//Tablets
+@media screen and (max-width: 800px) {
+
+    .contact-header {
+        margin-top: 48px;
+    }
+
+    .contact-header > h2 {
+        font-size: 32px;
+    }
+
+    .contact-cards {
+        margin-top: 32px;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 50%;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    textarea {
+        width: 60%;
+    }
+
+    button {
+        width: 30%;
+    }
+}
+
+//Smartphones
+@media screen and (max-width: 500px) {
+    .container {
+        flex-wrap: nowrap;
+        margin-bottom: 120px;
+    }
+
+    .contact-header {
+        margin-top: 24px;
+    }
+
+    .contact-header > h2 {
+        font-size: 24px;
+    }
+
+    .contact-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        padding: 32px;
+        width: auto;
+    }
+
+    .card {
+        width: 100%;
+        margin: 12px;
+    }
+
+    .card > a {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .card > i {
+        font-size: 20px;
+    }
+
+    .input-box {
+        margin-top: 0;
+        margin-bottom: 133px;
+        padding: 0;
+    }
+
+    button {
+        width: 40%;
+    }
 }
