@@ -51,13 +51,17 @@
     span.movie-rating {
         position: absolute;
         display: inline-block;
+        text-align: center;
         margin-top: 82px;
         right: 0;
         padding: 16px;
-        font-size: 16px;
+        font-size: 24px;
         font-weight: bold;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         color: white;
+        align-items: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     span.delete-icon {
@@ -225,5 +229,86 @@ select {
     &:hover {
         color: #847ebe;
         cursor: pointer; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .img-container {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .app-name-header {
+        font-size: 24px;
+    }
+
+    .img-container > img {
+        max-width: 100%;
+        max-height: 330px;
+    }
+
+    .img-container > h1 {
+        font-size: 24px;
+    }
+    
+    .popular-movies-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .popular-movies-header > h1 {
+        width: 320px;
+        font-size: 24px;
+    }
+
+    .popular-movie-card {
+        display: inherit;
+        margin: 32px;
+        font-size: 16px;
+    }
+    
+    .popular-movie-card > img {
+        max-width: 320px;
+        max-height: 320px;
+        border-radius: 8px;
+    }
+
+    .movie-title > h4 {
+        margin-top: 0;
+    }
+
+    .list-movies-header {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        font-size: 24px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin-bottom: 12px;
+    }
+
+    .matches {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .match-header {
+        font-size: 16px;
     }
 }
