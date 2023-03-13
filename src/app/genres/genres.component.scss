@@ -54,8 +54,21 @@ ul {
     font-weight: 400;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
    .genres {
     flex-direction: column;
+    margin: 0;
+   }
+
+   .popular-movie-card {
+    display: inherit;
+    margin: 32px;
+    font-size: 16px;
+   }
+
+   .popular-movie-card > img {
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 8px;
    }
 }
